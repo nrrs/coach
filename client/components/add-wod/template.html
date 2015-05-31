@@ -1,0 +1,39 @@
+<template name="AddWod">
+
+	<h3>ENTER WOD</h3>
+
+	{{createdDate}}
+	<!-- type is insert bc we're adding a new record -->
+
+	{{#autoForm
+		id="addWod"
+		collection="WODs"
+		type="insert"
+	}}
+		
+		<div class="radio-group" >
+			
+			<input class="" name="category" type="radio" id="AMRAP" value="AMRAP" data-schema-key="category"/>
+			<label for="AMRAP">AMRAP</label>
+		
+			<input class="" name="category" type="radio" id="EMOM" value="EMOM" data-schema-key="category"/>
+			<label for="EMOM">EMOM</label>
+
+			<input class="" name="category" type="radio" id="RFT" value="RFT" data-schema-key="category"/>
+			<label for="RFT">RFT</label>
+		
+			<input class="" name="category" type="radio" id="GOAT" value="GOAT" data-schema-key="category"/>
+			<label for="GOAT">GOAT</label>
+			
+		</div>
+		
+		{{> afQuickField name="name" class="validate"}}
+		{{> afQuickField name="workout" rows=6 class="materialize-textarea validate"}}
+		{{> afQuickField name="result" rows=6 class="materialize-textarea"}}
+		{{> afQuickField name="completionDate" class=""}}
+
+		
+		<button id="save-wod" type="submit" class="btn">SAVE</button>
+	{{/autoForm}}
+
+</template>

@@ -1,0 +1,17 @@
+<template name="AddLift">
+
+	<h3>ENTER LIFT</h3>
+	<p>Submitted: {{today}}</p>
+
+	{{#autoForm id="addLift" collection="lifts" type="insert"}}
+		{{> afQuickField name="name"}}
+		{{> afQuickField name="weight"}}
+		{{> afQuickField name="repScheme"}}
+		{{> afQuickField name="notes" rows=6}}
+		{{> afQuickField name="completionDate"}}
+		<button id="save-lift" type="submit" class="btn">SAVE</button>
+	{{/autoForm}}
+
+	<p class="message default-gutter"></p>
+
+</template>

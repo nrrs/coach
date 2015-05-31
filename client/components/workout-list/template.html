@@ -1,0 +1,16 @@
+<template name="workoutList">
+
+
+	<li>
+		<button class="delete">&times;</button>
+		<div class="collapsible-header">
+			<strong>{{category}}: {{name}}</strong>
+			<sub>{{createdAt}}</sub>
+		</div>
+		<div class="collapsible-body">
+			<p>{{{linebreak workout}}}</p>
+			<strong>Result: {{result}}</strong>
+		</div>
+	</li>
+  	
+</template>
