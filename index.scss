@@ -2,12 +2,11 @@
 // New .scss and .sass files will be automatically '@import'ed  at the bottom
 // Existing content in the file will not be touched
 // When deleting a .scss or .sass file you must manually delete it from here
-
 @import "client/styles/variables.scss";
 @import "client/styles/base.scss";
 @import "client/styles/typography.scss";
 
-@import "client/styles/components/navbar.scss";
 @import "client/styles/components/float-nav.scss";
 @import "client/styles/components/list.scss";
-@import "client/styles/components/index.scss";
+@import "client/styles/components/navbar.scss";
+

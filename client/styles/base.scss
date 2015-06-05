@@ -1,76 +1,76 @@
-// body {
-// 	background-color: $bg-color;
-// 	font-size: $base-unit;
-// }
+body {
+	background-color: $bg-color;
+	font-size: $base-unit;
+}
 
 
-// //	Placeholders
-// %default-gutter {
-// 	padding: 0px $base-unit;
-// }
-// .default-gutter {
-// 	@extend %default-gutter;
-// }
+//	Placeholders
+%default-gutter {
+	padding: 0px $base-unit;
+}
+.default-gutter {
+	@extend %default-gutter;
+}
 
-// //	ApplicationLayout
-// #main {
-// 	h1,h2,h3,h4,h5,p,ul:not(.app-list) {
-// 		@extend %default-gutter;
-// 	}
-// }
-// // ul.app-list {
-// // 	li {
-// // 		padding: $base-unit;
-// // 		background-color: #888;
-// // 		&:nth-child(odd) {
-// // 			background-color: #ccc;
-// // 		}
-// // 	}
-// // }
-
-// // Globals
-// .default-gutter {
-// 	@extend %default-gutter;
-// }
-// .delete {
-// 	float: right;
-// }
-
-// // 	Forms
-// .radio-group {
-// 	margin: $base-unit*2 0px;
-// }
-
-// //	Materialize Overrides
-// .collapsible {
-// 	margin: 0;
-// }
-// .collapsible-header {
-// 	&.active {
-// 		background-color: #e0e0e0;
-// 	}
-// }
-// .collapsible-body {
-// 	padding: $base-unit;
-// 	background-color: #8c8c8c;
-// }
-// form {
-// 	@extend %default-gutter;
-// 	textarea {
-// 		height: 5rem;
-// 		border: 0px;
-// 		outline: none;
-// 	}
-// 	select {
-// 		display: block;
-// 	}
-// 	input {
-// 		&[type='radio']:not(:checked),
-// 		&[type='radio']:checked {
-// 			& + label {
-// 				padding-left: 30px;
-// 				margin-right: 15px;
-// 			}
+//	ApplicationLayout
+#main {
+	h1,h2,h3,h4,h5,p,ul:not(.app-list) {
+		@extend %default-gutter;
+	}
+}
+// ul.app-list {
+// 	li {
+// 		padding: $base-unit;
+// 		background-color: #888;
+// 		&:nth-child(odd) {
+// 			background-color: #ccc;
 // 		}
 // 	}
 // }
+
+// Globals
+.default-gutter {
+	@extend %default-gutter;
+}
+.delete {
+	float: right;
+}
+
+// 	Forms
+.radio-group {
+	margin: $base-unit*2 0px;
+}
+
+//	Materialize Overrides
+.collapsible {
+	margin: 0;
+}
+.collapsible-header {
+	&.active {
+		background-color: #e0e0e0;
+	}
+}
+.collapsible-body {
+	padding: $base-unit;
+	background-color: #8c8c8c;
+}
+form {
+	@extend %default-gutter;
+	textarea {
+		height: 5rem;
+		border: 0px;
+		outline: none;
+	}
+	select {
+		display: block;
+	}
+	input {
+		&[type='radio']:not(:checked),
+		&[type='radio']:checked {
+			& + label {
+				padding-left: 30px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
