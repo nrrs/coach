@@ -5,3 +5,18 @@ Template.wods.onRendered(function() {
 	});
 
 })
+
+// Template.wods.events({
+
+//   "click .delete": function () {
+//     // lifts.remove(this._id);
+//     if (confirm('Confirm Deletion')) {
+//     	console.log('true');
+//     	// lifts.remove(this._id);
+//     } else {
+//     	console.log('flase');
+//     }
+//   }
+
+// });
+

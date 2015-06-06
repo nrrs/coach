@@ -8,9 +8,6 @@ body {
 %default-gutter {
 	padding: 0px $base-unit;
 }
-.default-gutter {
-	@extend %default-gutter;
-}
 
 //	ApplicationLayout
 #main {
@@ -31,9 +28,6 @@ body {
 // Globals
 .default-gutter {
 	@extend %default-gutter;
-}
-.delete {
-	float: right;
 }
 
 // 	Forms

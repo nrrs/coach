@@ -13,24 +13,38 @@
 		<ul class="app-list collapsible " data-collapsible="accordion">
 			{{#each exercise}}
 			    <li>
-			      <div class="collapsible-header">
-			        <strong>
-				        {{#if category}}
-				          {{category}}:
-				        {{/if}}
-				        {{name}}
-			        </strong>
-			        <span class="completed">{{prettifyDateAgo completionDate}}</span>
-			      </div>
-			      <div class="collapsible-body grey lighten-3">
-			      {{#if notes}}
-			        <p>{{{linebreak notes}}}</p>
-			      {{/if}}
-			      {{#if workout}}
-			        <p>{{{linebreak workout}}}</p>
-			      {{/if}}
-			      <button class="btn green right">EDIT</button>
-			      </div>
+			    	<button class="delete">&times;</button>
+			      	<div class="collapsible-header">
+				        <strong>
+					        {{#if category}}
+					          {{category}}:
+					        {{/if}}
+
+					        {{name}}
+					        
+					        {{#if weight}}
+					          {{repScheme}} @ {{weight}}#
+					        {{/if}}
+						</strong>
+						<span class="completed" style="display:block">{{prettifyDateAgo completionDate}}</span>
+					</div>
+					<div class="collapsible-body grey lighten-3">
+						{{#if workout}}
+							<p>{{{linebreak workout}}}</p>
+						{{/if}}
+						
+						{{#if notes}}
+							<p><strong>Notes:</strong><br/>
+							{{{linebreak notes}}}</p>
+						{{/if}}
+						
+						{{#if result}}
+							<br/>			      	
+							<p><strong>Results:</strong><br/>
+							{{{linebreak result}}}</p>
+						{{/if}}
+						<button class="btn green right">EDIT</button>
+					</div>
 			    </li>
 			  {{/each}}
 		</ul>

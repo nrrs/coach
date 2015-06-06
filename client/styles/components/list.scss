@@ -1,5 +1,14 @@
 .completed {
-	float: right;
 	font-size: 75%;
 	vertical-align: middle;
+}
+.app-list {
+	.collapsible-header {
+		height: auto;
+		line-height: normal;
+		padding: 5px $base-unit;
+	}
+	.delete {
+		float: right;
+	}
 }

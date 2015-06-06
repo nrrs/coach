@@ -14,6 +14,10 @@ lifts.attachSchema(new SimpleSchema({
 		type: String,
 		optional: true
 	},
+	result: {
+		type: String,
+		optional: true
+	},
 	completionDate: {
 		type: Date,
 		optional: true
