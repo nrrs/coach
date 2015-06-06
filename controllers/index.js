@@ -1,7 +1,4 @@
 IndexController = ApplicationController.extend({
-	//	Scope combined workouts to most recent 3, combined.helper will grab all and sort
-
-	//	Do i use subscriptions and posts here??
 	data: function(){
 		return {
 			wods: function() {

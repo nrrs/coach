@@ -1,6 +1,6 @@
 WodsController = ApplicationController.extend({
 	data: {
-		workouts: function() {
+		wods: function() {
 			return WODs.find({}, {sort: {createdAt: -1}});
 		}
 	}
