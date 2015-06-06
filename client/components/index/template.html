@@ -1,26 +1,20 @@
 <template name="Index">
-  <ul class="combined-list app-list collapsible" data-collapsible="accordion">
-  {{#each both}}
-      <li>
-      <div class="collapsible-header">
-        <strong>
-        {{#if category}}
-          {{category}}:
-        {{/if}}
-        {{name}}</strong>
-        <span class="completed">{{prettifyDate completionDate}}</span>
-      </div>
-      <div class="collapsible-body grey lighten-3">
-        <p>{{{linebreak notes}}}{{{linebreak workout}}}</p>
-      </div>
-    </li>
-  {{/each}}
-  </ul>
+
+  {{> NavBar
+      pageTitle='Coach!'
+  }}
+
+  {{> listExercise
+      exercise=both
+  }}
 
   <h4>To be added:</h4>
   <ul>
     <li>add lift/wod or chose from database</li>
     <li>move page title to navBar - dynamic based on page</li>
+    <li>list-lifts</li>
+    <li>list-wods</li>
+    <li>list-both</li>
   </ul>
 
 </template>

@@ -8,8 +8,4 @@ Template.liftList.events({
 
 Template.liftList.helpers({
 
-	linebreak: function(text) {
-		return text.replace(/\n/g,'<br/>');
-	}
-
 });

@@ -1,7 +1,11 @@
 <template name="lifts">
+
+	{{> NavBar
+		pageTitle='Lifts'
+	}}
 	
-	{{> exerciseList
-		listTitle='Skills/Weightlifting'
+	{{> listExercise
+		listTitle=''
 		listItemTemplate='liftList'
 		exercise=lifts
 	}}

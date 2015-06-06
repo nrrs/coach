@@ -4,4 +4,8 @@ Template.body.onRendered(function() {
 		closeOnClick: true	
 	});
 
+	$('select').material_select();
+
+	$(".collapsible").collapsible();
+	
 })

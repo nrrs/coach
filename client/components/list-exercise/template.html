@@ -1,0 +1,40 @@
+<template name="listExercise">
+
+	<!-- <h3>{{listTitle}}</h3> -->
+	
+	<!-- <ul class="app-list collapsible" data-collapsible="accordion">
+		{{#each exercise}}
+			{{> Template.dynamic template=../listItemTemplate}}
+		{{/each}}
+	</ul>
+ -->
+	<div class="list-exercise">
+
+		<ul class="app-list collapsible " data-collapsible="accordion">
+			{{#each exercise}}
+			    <li>
+			      <div class="collapsible-header">
+			        <strong>
+				        {{#if category}}
+				          {{category}}:
+				        {{/if}}
+				        {{name}}
+			        </strong>
+			        <span class="completed">{{prettifyDateAgo completionDate}}</span>
+			      </div>
+			      <div class="collapsible-body grey lighten-3">
+			      {{#if notes}}
+			        <p>{{{linebreak notes}}}</p>
+			      {{/if}}
+			      {{#if workout}}
+			        <p>{{{linebreak workout}}}</p>
+			      {{/if}}
+			      <button class="btn green right">EDIT</button>
+			      </div>
+			    </li>
+			  {{/each}}
+		</ul>
+
+	</div>
+  	
+</template>

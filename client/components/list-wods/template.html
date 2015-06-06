@@ -1,13 +1,14 @@
-<template name="liftList">
+<template name="listWods">
 
-  	<li>
+	<li>
 		<button class="delete">&times;</button>
 		<div class="collapsible-header">
-			<strong>{{name}}: {{repScheme}} @  {{weight}}#</strong>
+			<strong>{{category}}: {{name}}</strong>
 			<sub>{{createdAt}}</sub>
 		</div>
 		<div class="collapsible-body">
-			<p>{{{linebreak notes}}}</p>
+			<p>{{{linebreak workout}}}</p>
+			<strong>Result: {{result}}</strong>
 		</div>
 	</li>
   	

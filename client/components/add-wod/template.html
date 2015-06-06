@@ -1,9 +1,8 @@
-<template name="AddWod">
+<template name="addWod">
 
-	<h3>ENTER WOD</h3>
-
-	{{createdDate}}
-	<!-- type is insert bc we're adding a new record -->
+	{{> NavBar
+	    pageTitle='Enter WOD'
+	}}
 
 	{{#autoForm
 		id="addWod"
@@ -11,7 +10,7 @@
 		type="insert"
 	}}
 		
-		<div class="radio-group" >
+<!-- 		<div class="radio-group" >
 			
 			<input class="" name="category" type="radio" id="AMRAP" value="AMRAP" data-schema-key="category"/>
 			<label for="AMRAP">AMRAP</label>
@@ -24,9 +23,10 @@
 		
 			<input class="" name="category" type="radio" id="GOAT" value="GOAT" data-schema-key="category"/>
 			<label for="GOAT">GOAT</label>
-			
-		</div>
+		</div> -->
 		
+
+		{{> afQuickField name="category" options="allowed"}}
 		{{> afQuickField name="name" class="validate"}}
 		{{> afQuickField name="workout" rows=6 class="materialize-textarea validate"}}
 		{{> afQuickField name="result" rows=6 class="materialize-textarea"}}

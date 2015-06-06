@@ -14,7 +14,7 @@ body {
 
 //	ApplicationLayout
 #main {
-	h1,h2,h3,h4,h5,p,ul:not(.app-list) {
+	h1,h2,h3,h4,h5,p {
 		@extend %default-gutter;
 	}
 }
@@ -61,9 +61,9 @@ form {
 		border: 0px;
 		outline: none;
 	}
-	select {
-		display: block;
-	}
+	// select {
+	// 	display: block;
+	// }
 	input {
 		&[type='radio']:not(:checked),
 		&[type='radio']:checked {

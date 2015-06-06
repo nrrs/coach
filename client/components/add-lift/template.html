@@ -1,6 +1,8 @@
-<template name="AddLift">
+<template name="addLift">
 
-  <h3>ENTER LIFT</h3>
+  {{> NavBar
+      pageTitle='Enter Lift'
+  }}
   <p>Submitted: {{today}}</p>
 
   {{#autoForm id="addLift" collection="lifts" type="insert"}}

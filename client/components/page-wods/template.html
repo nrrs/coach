@@ -1,0 +1,21 @@
+<template name="wods">
+	
+	{{> NavBar
+		pageTitle='WODs'
+	}}
+
+	{{> listExercise
+		listTitle='WODs/Metcons!'
+		listItemTemplate='listWods'
+		exercise=wods
+	}}
+
+	<!-- <sub>exercise=workouts wont work bc controller set wods to be cursor<br/>
+	listItemTemplate is no longer used bc we aggregated all to listExercise, not _exerciseList</sub>
+	{{> listExercise
+		listTitle='WODs/Metcons!'
+		listItemTemplate='listWods'
+		exercise=workouts
+	}} -->
+
+</template>

@@ -2,6 +2,11 @@ Template.Index.onRendered(function() {
 
 	$(".collapsible").collapsible();
 
+	$(".button-collapse").sideNav({
+		closeOnClick: true	
+	});
+
+
 });
 
 Template.Index.helpers({
@@ -11,16 +16,12 @@ Template.Index.helpers({
 			l = Template.instance().data.lifts().fetch();
 			wl = w.concat(l);
 
-		return _.sortBy(
+		return (_.sortBy(
 			wl,
 			function(wl) {
 				return wl.completionDate;
-			}
+			}).reverse()
 		);
-	},
-
-	linebreak: function(text) {
-		return text.replace(/\n/g,'<br/>');
 	},
 
 });

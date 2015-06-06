@@ -1,7 +1,7 @@
 <template name="exerciseList">
 
-	<h3>{{listTitle}}</h3>
-	<ul class="app-list collapsible" data-collapsible="accordion">
+	{{listTitle}} _exercise-list!!
+	<ul class="app-list collapsible exercise-list" data-collapsible="accordion">
 		{{#each exercise}}
 			{{> Template.dynamic template=../listItemTemplate}}
 		{{/each}}
