@@ -1,22 +1,20 @@
 Template.wods.onRendered(function() {
 
-	$(".button-collapse").sideNav({
-		closeOnClick: true	
-	});
+	Session.set('pageTitle', 'WODs');
 
 })
 
-// Template.wods.events({
+Template.wods.events({
 
-//   "click .delete": function () {
-//     // lifts.remove(this._id);
-//     if (confirm('Confirm Deletion')) {
-//     	console.log('true');
-//     	// lifts.remove(this._id);
-//     } else {
-//     	console.log('flase');
-//     }
-//   }
+  "click .delete": function () {
+  	console.log('this-wods: ', this);
+    // // WODs.remove(this._id);
+    // if (confirm('Confirm Deletion')) {
+    // 	console.log('true');
+    // 	WODs.remove(this._id);
+    // } else {
+    // 	console.log('false');
+    // }
+  }
 
-// });
-
+});

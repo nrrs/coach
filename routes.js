@@ -3,11 +3,11 @@ Router.route('/', {
 });
 
 Router.route('/add-wod', {
-	name: 'add.wod'
+	name: 'addWod'
 });
 
 Router.route('/add-lift', {
-	name: 'add.lift'
+	name: 'addLift'
 });
 
 Router.route('/wods', {
@@ -21,3 +21,5 @@ Router.route('/lifts', {
 Router.route('/test', {
 	name: 'test'
 });
+
+// Router.go('/');

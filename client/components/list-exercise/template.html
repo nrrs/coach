@@ -20,7 +20,7 @@
 					          {{category}}:
 					        {{/if}}
 
-					        {{name}}
+					        {{name}} {{#if AMRAP this.category}}min{{/if}}
 					        
 					        {{#if weight}}
 					          {{repScheme}} @ {{weight}}#
@@ -43,7 +43,7 @@
 							<p><strong>Results:</strong><br/>
 							{{{linebreak result}}}</p>
 						{{/if}}
-						<button class="btn green right">EDIT</button>
+						<a class="waves-effect waves-light btn modal-trigger" href="#delete">EDIT</a>
 					</div>
 			    </li>
 			  {{/each}}

@@ -2,9 +2,11 @@ Template.Index.onRendered(function() {
 
 	$(".collapsible").collapsible();
 
-	$(".button-collapse").sideNav({
-		closeOnClick: true	
-	});
+	Session.set('pageTitle', 'Coach!');
+
+	// $(".button-collapse").sideNav({
+	// 	closeOnClick: true	
+	// });
 
 
 });

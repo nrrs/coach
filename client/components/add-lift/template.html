@@ -1,9 +1,7 @@
 <template name="addLift">
 
-  {{> NavBar
-      pageTitle='Enter Lift'
-  }}
-  <p>Submitted: {{today}}</p>
+  {{> NavBar}}
+  <p>Submitted: {{prettifyDateAgo today}}</p>
 
   {{#autoForm id="addLift" collection="lifts" type="insert"}}
     {{> afQuickField name="name"}}

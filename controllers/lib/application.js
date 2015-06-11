@@ -1,5 +1,5 @@
 ApplicationController = RouteController.extend({
-	layoutTemplate: 'ApplicationLayout',
+	layoutTemplate: 'applicationLayout',
 	notFoundTemplate: 'notFoundLayout',
 	loadingTemplate: 'loadingLayout'
 });

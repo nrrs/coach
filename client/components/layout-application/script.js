@@ -1,9 +1,5 @@
-// Template.body.onRendered(function() {
+Template.body.onRendered(function() {
 
-// 	$(".button-collapse").sideNav({
-// 		closeOnClick: true	
-// 	});
+	$(".collapsible").collapsible();
 
-// 	$(".collapsible").collapsible();
-
-// })
+})
