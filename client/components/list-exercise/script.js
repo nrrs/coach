@@ -22,8 +22,19 @@ Template.listExercise.onRendered(function() {
 
 Template.listExercise.events({
 
+	"click .delete": function () {
+		console.log('this:', this);
+	    lifts.remove(this._id);
+	    WODs.remove(this._id);
+	    // if (confirm('Confirm Deletion')) {
+	    // 	console.log('true');
+	    // 	lifts.remove(this._id);
+	    // } else {
+	    // 	console.log('flase');
+	    // }
+	  }
 
-	
+
 	
 
 });
