@@ -1,54 +1,11 @@
 <template name="listExercise">
 
-	<!-- <h3>{{listTitle}}</h3> -->
-	
-	<!-- <ul class="app-list collapsible" data-collapsible="accordion">
-		{{#each exercise}}
-			{{> Template.dynamic template=../listItemTemplate}}
-		{{/each}}
-	</ul>
- -->
 	<div class="list-exercise">
-
 		<ul class="app-list collapsible " data-collapsible="accordion">
 			{{#each exercise}}
-			    <li>
-			    	<button class="delete">&times;</button>
-			      	<div class="collapsible-header">
-				        <strong>
-					        {{#if category}}
-					          {{category}}:
-					        {{/if}}
-
-					        {{name}} {{#if AMRAP this.category}}min{{/if}}
-					        
-					        {{#if weight}}
-					          {{repScheme}} @ {{weight}}#
-					        {{/if}}
-						</strong>
-						<span class="completed" style="display:block">{{prettifyDateAgo completionDate}}</span>
-					</div>
-					<div class="collapsible-body grey lighten-3">
-						{{#if workout}}
-							<p>{{{linebreak workout}}}</p>
-						{{/if}}
-						
-						{{#if notes}}
-							<p><strong>Notes:</strong><br/>
-							{{{linebreak notes}}}</p>
-						{{/if}}
-						
-						{{#if result}}
-							<br/>			      	
-							<p><strong>Results:</strong><br/>
-							{{{linebreak result}}}</p>
-						{{/if}}
-						<a class="waves-effect waves-light btn modal-trigger" href="#delete">EDIT</a>
-					</div>
-			    </li>
+				{{> listExerciseItem}}
 			  {{/each}}
 		</ul>
-
 	</div>
   	
 </template>

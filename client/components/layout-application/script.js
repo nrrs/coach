@@ -1,5 +1,5 @@
-Template.body.onRendered(function() {
+// Template.applicationLayout.onRendered(function() {
 
-	$(".collapsible").collapsible();
+// 	$(".collapsible").collapsible();
 
-})
+// })

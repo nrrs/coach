@@ -1,0 +1,39 @@
+<template name="listExerciseItem">
+
+    <li>
+      	<div class="collapsible-header">
+	        <strong>
+		        {{#if category}}
+		          {{category}}:
+		        {{/if}}
+
+		        {{name}} {{#if AMRAP this.category}}min{{/if}}
+		        
+		        {{#if weight}}
+		          {{repScheme}} @ {{weight}}#
+		        {{/if}}
+			</strong>
+			<span class="completed" style="display:block">{{prettifyDateAgo completionDate}}</span>
+		</div>
+		<div class="collapsible-body grey lighten-3">
+			{{#if workout}}
+				<p>{{{linebreak workout}}}</p>
+			{{/if}}
+			
+			{{#if notes}}
+				<p><strong>Notes:</strong><br/>
+				{{{linebreak notes}}}</p>
+			{{/if}}
+			
+			{{#if result}}
+				<br/>			      	
+				<p><strong>Results:</strong><br/>
+				{{{linebreak result}}}</p>
+			{{/if}}
+			<br/>
+			<a class="waves-effect waves-red btn-flat modal-trigger delete" href="#delete">Delete</a>
+			<a class="waves-effect waves-green btn-flat modal-trigger edit right" href="#edit">Edit</a>
+		</div>
+    </li>
+
+</template>

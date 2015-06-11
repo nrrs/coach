@@ -1,7 +1,9 @@
 Template.NavBar.helpers({
+
 	navTitle : function() {
 		return Session.get('pageTitle');
-	}
+	},
+
 });
 
 Template.NavBar.onRendered(function() {
