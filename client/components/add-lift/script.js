@@ -16,14 +16,5 @@ Template.addLift.events({
 
 
 Template.addLift.helpers({
-  today: function() {
-    return Date();
-  }
-
-
-
 
 });
-
-
-// Template.addLift.events

@@ -14,7 +14,7 @@ Template.Index.helpers({
 		return (_.sortBy(
 			bl,
 			function(bl) {
-				return bl.completionDate;
+				return bl.date;
 			}).reverse()
 		);
 	},

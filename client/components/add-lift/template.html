@@ -1,10 +1,10 @@
 <template name="addLift">
 
   {{> NavBar}}
-  <p>Submitted: {{prettifyDateAgo today}}</p>
 
   {{#autoForm id="addLift" collection="lifts" type="insert"}}
-    {{> afQuickField name="name"}}
+    {{> afQuickField name="date" value=timestamp}}
+    {{> afQuickField name="liftType" options="allowed" label="Lift"}}
     {{> afQuickField name="weight"}}
     {{> afQuickField name="repScheme"}}
     {{> afQuickField name="notes" rows=6 class="materialize-textarea"}}

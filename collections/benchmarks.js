@@ -1,31 +1,38 @@
 benchmarks = new Mongo.Collection("benchmarks");
 
 benchmarks.attachSchema(new SimpleSchema({
-	name: {
-		type: String,
+	date: {
+		type: Date
 	},
-	workout: {
-		type: String,
-	},
-	category: {
+	girl: {
 		type: String,
 		allowedValues: [
-			'AMRAP',
-			'EMOM',
-			'RFT',
-			'GOAT'
+			'Angie',
+			'Fran'
+			// {
+			// 	type: [Object],
+			// 	name: 'Angie',
+			// 	// workout: '
+			// 	// 	100 Pull-ups,
+			// 	// 	100 Push-ups,
+			// 	// 	100 Sit-ups,
+			// 	// 	100 Squats
+			// 	// ',
+			// 	// measure: '
+			// 	// 	For Time
+			// 	// 	Complete all reps before moving to next station.
+			// 	// '
+			// },
+			// {
+			// 	type: [Object],
+			// 	name: 'Helen',
+			// 	// workout: '',
+			// 	// measure: ''
+			// }
 		]
 	},
-	result: {
+	notes: {
 		type: String,
-		optional: true
-	},
-	completionDate: {
-		type: Date,
-		optional: true
-	},
-	createdAt: {
-		type: Date,
 		optional: true
 	}
 }));

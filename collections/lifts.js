@@ -1,18 +1,30 @@
 lifts = new Mongo.Collection("lifts");
 
 lifts.attachSchema(new SimpleSchema({
-	name: {
-		type: String,
+	date: {
+		type: Date
 	},
-	// type: {
-	// 	type: String,
-	// 	allowedValues: [
-	// 		'BS',
-	// 		'FS',
-	// 		'OHS',
-	// 		'DL'
-	// 	]
-	// },
+	liftType: {
+		type: String,
+		allowedValues: [
+			'Back Squat',
+			'Front Squat',
+			'Overhead Squat',
+			'Strict Press',
+			'Push Press',
+			'Push Jerk',
+			'Split Jerk',
+			'Power Clean',
+			'Squat Clean',
+			'Power Snatch',
+			'Squat Snatch',
+			'Deadlift',
+			'Bench Press',
+			'Thruster',
+			'Cluster',
+			'Butt Thruster',
+		]
+	},
 	weight: {
 		type: Number,
 	},
@@ -21,18 +33,6 @@ lifts.attachSchema(new SimpleSchema({
 	},
 	notes: {
 		type: String,
-		optional: true
-	},
-	result: {
-		type: String,
-		optional: true
-	},
-	completionDate: {
-		type: Date,
-		optional: true
-	},
-	createdAt: {
-		type: Date,
 		optional: true
 	}
 }));

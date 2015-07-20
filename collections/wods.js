@@ -23,7 +23,7 @@ wods.attachSchema(new SimpleSchema({
 		type: String,
 		optional: true
 	},
-	result: {
+	notes: {
 		type: String,
 		optional: true
 	}

@@ -1,4 +1,5 @@
 .completed {
+	display: block;
 	font-size: 75%;
 	vertical-align: middle;
 }
@@ -7,6 +8,11 @@
 		height: auto;
 		line-height: normal;
 		padding: 5px $base-unit;
+	}
+	.collapsible-body {
+		p {
+			padding: 0;
+		}
 	}
 	.delete {
 		padding: 0px $base-unit;

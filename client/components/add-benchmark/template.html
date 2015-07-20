@@ -8,27 +8,9 @@
 		type="insert"
 	}}
 		
-<!-- 		<div class="radio-group" >
-			
-			<input class="" name="category" type="radio" id="AMRAP" value="AMRAP" data-schema-key="category"/>
-			<label for="AMRAP">AMRAP</label>
-		
-			<input class="" name="category" type="radio" id="EMOM" value="EMOM" data-schema-key="category"/>
-			<label for="EMOM">EMOM</label>
-
-			<input class="" name="category" type="radio" id="RFT" value="RFT" data-schema-key="category"/>
-			<label for="RFT">RFT</label>
-		
-			<input class="" name="category" type="radio" id="GOAT" value="GOAT" data-schema-key="category"/>
-			<label for="GOAT">GOAT</label>
-		</div> -->
-		
-
-		{{> afQuickField name="category" options="allowed"}}
-		{{> afQuickField name="name" class="validate"}}
-		{{> afQuickField name="workout" rows=6 class="materialize-textarea validate"}}
-		{{> afQuickField name="result" rows=6 class="materialize-textarea"}}
-		{{> afQuickField name="completionDate"}}
+		{{> afQuickField name="date" value=timestamp}}
+		{{> afQuickField name="girl" options="allowed"}}
+		{{> afQuickField name="notes" rows=6 class="materialize-textarea"}}
 
 		
 		<button id="save-benchmark" type="submit" class="btn">SAVE</button>

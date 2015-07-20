@@ -20,8 +20,8 @@ Template.listExerciseItem.events({
 
 Template.listExerciseItem.helpers({
 
-	AMRAP: function(category) {
-		if(category == "AMRAP") {
+	test: function(category) {
+		if(category == "Fran") {
 			return true;
 		}
 	}
