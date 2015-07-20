@@ -12,6 +12,10 @@ Template.listExerciseItem.events({
 		Session.set('exerciseID', this._id);
 	},
 
+	"click .edit": function() {
+		Session.set('exerciseName', this.name);
+	},
+
 });
 
 Template.listExerciseItem.helpers({

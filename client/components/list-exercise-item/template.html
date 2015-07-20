@@ -8,14 +8,25 @@
 		        {{/if}}
 
 		        {{name}} {{#if AMRAP this.category}}min{{/if}}
+
+				{{prettifyDate date}}
 		        
 		        {{#if weight}}
 		          {{repScheme}} @ {{weight}}#
 		        {{/if}}
 			</strong>
-			<span class="completed" style="display:block">{{prettifyDateAgo completionDate}}</span>
+
+				{{#if completionDate}}
+				<span class="completed" style="display:block">{{prettifyDate date}} ({{prettifyDateAgo completionDate}})</span>
+				{{/if}}
 		</div>
 		<div class="collapsible-body grey lighten-3">
+			{{#if warmup}}
+				<h3>Warm Up:</h3>
+				<p>{{{linebreak warmup}}}</p>
+			{{/if}}
+
+
 			{{#if workout}}
 				<p>{{{linebreak workout}}}</p>
 			{{/if}}
@@ -36,4 +47,4 @@
 		</div>
     </li>
 
-</template>
+</template>	

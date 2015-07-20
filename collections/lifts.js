@@ -4,6 +4,15 @@ lifts.attachSchema(new SimpleSchema({
 	name: {
 		type: String,
 	},
+	// type: {
+	// 	type: String,
+	// 	allowedValues: [
+	// 		'BS',
+	// 		'FS',
+	// 		'OHS',
+	// 		'DL'
+	// 	]
+	// },
 	weight: {
 		type: Number,
 	},

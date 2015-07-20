@@ -7,14 +7,14 @@ Template.Index.onRendered(function() {
 Template.Index.helpers({
 
 	both: function() {
-		var w = Template.instance().data.wods().fetch(),
+		var b = Template.instance().data.bm().fetch(),
 			l = Template.instance().data.lifts().fetch();
-			wl = w.concat(l);
+			bl = b.concat(l);
 
 		return (_.sortBy(
-			wl,
-			function(wl) {
-				return wl.completionDate;
+			bl,
+			function(bl) {
+				return bl.completionDate;
 			}).reverse()
 		);
 	},

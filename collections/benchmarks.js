@@ -1,6 +1,6 @@
-WODs = new Mongo.Collection("workouts");
+benchmarks = new Mongo.Collection("benchmarks");
 
-WODs.attachSchema(new SimpleSchema({
+benchmarks.attachSchema(new SimpleSchema({
 	name: {
 		type: String,
 	},

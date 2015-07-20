@@ -1,7 +1,8 @@
 Template.modalEdit.helpers({
 
   boom: function() {
-  	return 'test';
+  	var exerciseName = Session.get('exerciseName');
+  	return exerciseName;
   }
 
 });

@@ -1,3 +1,11 @@
+Template.registerHelper("timestamp", function() {
+	return new Date();
+});
+
+Template.registerHelper("today", function() {
+	return moment(new Date()).format('LL');
+});
+
 Template.registerHelper("prettifyDateAgo", function(timestamp) {
 	return moment(new Date(timestamp)).fromNow();
 });

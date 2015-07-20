@@ -6,6 +6,24 @@ Template.addWod.onRendered(function() {
 
 	$('select').material_select();
 
-	Session.set('pageTitle', 'Add WOD');
-
+	Session.set('pageTitle', 'Add Wod');
 })
+
+Template.addWod.events({
+
+
+});
+
+
+
+Template.addWod.helpers({
+
+	// var 
+
+ //  today: function() {
+ //    return new Date();
+ //  },
+ //  todayFancy: function() {
+ //  	return moment(new Date()).format('LL');
+ //  }
+});

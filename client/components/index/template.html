@@ -1,24 +1,31 @@
 <template name="Index">
 
-  {{> listExercise
-      exercise=both
-  }}
+<strong class="default-gutter">Daily Wods</strong>
+{{> listExercise
+    exercise=wods
+}}
+
+<strong class="default-gutter">Benchmarks/Lifts</strong>
+{{> listExercise
+    exercise=both
+}}
+
 
   <br/>
 
+  <!--
   <div class="default-gutter">
     <strong>To be added:</strong>
     <ul>
-      <li>add lift/wod or chose from database</li>
-      <li><strike>move page title to navBar - dynamic based on page</strike></li>
-      <li><strike>list-lifts</strike></li>
-      <li><strike>list-wods</strike></li>
-      <li><strike>list-both</strike></li>
-      <li>Return Collection (Model) name from record</li>
-      <li><strike>Troubleshoot broken collapse on app load</strike></li>
-      <li>UX - add remove/edit buttons to collapse header</li>
       <li>add edit record functionality</li>
+      <li>Add USER functionality</li>
+      <li>add lift/wod or chose from database</li>
+      <li>Insight page</li>
+      <br/>
+      <strong>Burner</strong>
+      <li>Return Collection (Model) name from record</li>
     </ul>
   </div>
+  -->
 
 </template>

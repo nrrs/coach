@@ -2,8 +2,19 @@
 
 	<div id="edit" class="modal">
 		<div class="modal-content">
-		  <h4>Modal Header {{boom}}</h4>
-		  <p>A bunch of text</p>
+		  <h4>Edit {{boom}}</h4>
+		  
+		  {{#autoForm id="addLift" collection="lifts" type="insert"}}
+		    {{> afQuickField name="name"}}
+		    {{> afQuickField name="weight"}}
+		    {{> afQuickField name="repScheme"}}
+		    {{> afQuickField name="notes" rows=6 class="materialize-textarea"}}
+		    {{> afQuickField name="result" rows=6 class="materialize-textarea"}}
+		    {{> afQuickField name="completionDate"}}
+		    <button id="save-lift" type="submit" class="btn">SAVE</button>
+		  {{/autoForm}}
+
+
 		</div>
 		<div class="modal-footer">
 		  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>

@@ -1,10 +1,10 @@
-<template name="addWod">
+<template name="addBenchmark">
 
 	{{> NavBar}}
 
 	{{#autoForm
-		id="addWod"
-		collection="wods"
+		id="addBenchmark"
+		collection="benchmarks"
 		type="insert"
 	}}
 		
@@ -23,16 +23,15 @@
 			<label for="GOAT">GOAT</label>
 		</div> -->
 		
-		{{> afQuickField name="date" value=timestamp}}
-		{{> afQuickField name="name" class="validate" value=today}}
-		{{> afQuickField name="warmup" rows=6 class="materialize-textarea validate"}}
-		{{> afQuickField name="strength" rows=6 class="materialize-textarea validate"}}
-		{{> afQuickField name="conditioning" rows=6 class="materialize-textarea validate"}}
-		{{> afQuickField name="goat" rows=6 class="materialize-textarea validate"}}
+
+		{{> afQuickField name="category" options="allowed"}}
+		{{> afQuickField name="name" class="validate"}}
+		{{> afQuickField name="workout" rows=6 class="materialize-textarea validate"}}
 		{{> afQuickField name="result" rows=6 class="materialize-textarea"}}
+		{{> afQuickField name="completionDate"}}
 
 		
-		<button id="save-wod" type="submit" class="btn">SAVE</button>
+		<button id="save-benchmark" type="submit" class="btn">SAVE</button>
 	{{/autoForm}}
 
 </template>
