@@ -2,23 +2,35 @@
 
 	<div id="edit" class="modal">
 		<div class="modal-content">
-		  <h4>Edit {{exerciseName}}</h4>
+		  <h4 class="default-gutter"> {{fuck}}: {{exerciseName}}</h4>
+
+		  <!--
+			
+			use modalEdit.helper to pull this item's unique ID.
+			change autoform type from insert to update
+			remove required fields
+			make "agree" save button.
+
+		  -->
 		  
-		  {{#autoForm id="addLift" collection="lifts" type="insert"}}
-		    {{> afQuickField name="name"}}
-		    {{> afQuickField name="weight"}}
-		    {{> afQuickField name="repScheme"}}
-		    {{> afQuickField name="notes" rows=6 class="materialize-textarea"}}
-		    {{> afQuickField name="result" rows=6 class="materialize-textarea"}}
-		    {{> afQuickField name="completionDate"}}
-		    <button id="save-lift" type="submit" class="btn">SAVE</button>
+		  {{#autoForm id="editEntry" collection="lifts" type="insert"}}
+			{{> afQuickField name="date" value=timestamp}}
+			{{> afQuickField name="liftType" options="allowed" label="Lift"}}
+			{{> afQuickField name="weight"}}
+			{{> afQuickField name="repScheme"}}
+			{{> afQuickField name="notes" rows=6 class="materialize-textarea"}}
+			{{> afQuickField name="result" rows=6 class="materialize-textarea"}}
+			{{> afQuickField name="completionDate"}}
+		    <button id="save-lift" type="submit" class="modal-action modal-close waves-effect waves-green btn">DONE</button>
 		  {{/autoForm}}
 
 
 		</div>
+		<!--
 		<div class="modal-footer">
-		  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
 		</div>
+		-->
 	</div>
 
 </template>

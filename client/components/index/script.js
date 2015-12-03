@@ -6,7 +6,7 @@ Template.Index.onRendered(function() {
 
 Template.Index.helpers({
 
-	both: function() {
+	bothBMandLifts: function() {
 		var b = Template.instance().data.bm().fetch(),
 			l = Template.instance().data.lifts().fetch();
 			bl = b.concat(l);

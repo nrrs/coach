@@ -7,7 +7,7 @@ Template.addLift.onRendered(function() {
 	$('select').material_select();
 
 	Session.set('pageTitle', 'Add Lift');
-})
+});
 
 Template.addLift.events({
 	

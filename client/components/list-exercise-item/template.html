@@ -16,11 +16,12 @@
 
 				{{#if date}}
 					<span class="completed">
-						{{prettifyDate date}} ({{prettifyDateAgo date}})
+						Completed: {{prettifyDate date}} ({{prettifyDateAgo date}})
 					</span>
 				{{/if}}
 		</div>
 		<div class="collapsible-body grey lighten-3">
+			<!-- if WOD.. -->
 			{{#if warmup}}
 				<strong>Warm Up:</strong>
 				<p>{{{linebreak warmup}}}</p>
@@ -42,6 +43,19 @@
 			{{#if goat}}
 				<strong>Goat:</strong>
 				<p>{{{linebreak goat}}}</p>
+				<br/>
+			{{/if}}
+
+			<!-- if lift.. -->
+			{{#if weight}}
+				<strong>Weight:</strong>
+				<span>{{weight}}#</span>
+				<br/>
+			{{/if}}
+
+			{{#if repScheme}}
+				<strong>Rep Scheme:</strong>
+				<p>{{repScheme}}</p>
 				<br/>
 			{{/if}}
 
