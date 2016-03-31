@@ -2,7 +2,7 @@
 
 	<div id="edit" class="modal">
 		<div class="modal-content">
-		  <h4 class="default-gutter"> {{fuck}}: {{exerciseName}}</h4>
+		  <h4 class="default-gutter"> {{fuck}}: {{exerciseID}}</h4>
 
 		  <!--
 			
@@ -12,8 +12,17 @@
 			make "agree" save button.
 
 		  -->
-		  
-		  {{#autoForm id="editEntry" collection="lifts" type="insert"}}
+		 	
+		  {{> quickForm collection="lifts" doc=exerciseID id="editEntry" type="update"}}
+
+		  <!--{{exerciseID}} -->
+
+		  <hr/>
+
+		  <!-- {{#autoForm id="editEntry" collection="lifts" type="insert"}}
+
+
+
 			{{> afQuickField name="date" value=timestamp}}
 			{{> afQuickField name="liftType" options="allowed" label="Lift"}}
 			{{> afQuickField name="weight"}}
@@ -22,7 +31,7 @@
 			{{> afQuickField name="result" rows=6 class="materialize-textarea"}}
 			{{> afQuickField name="completionDate"}}
 		    <button id="save-lift" type="submit" class="modal-action modal-close waves-effect waves-green btn">DONE</button>
-		  {{/autoForm}}
+		  {{/autoForm}} -->
 
 
 		</div>

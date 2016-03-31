@@ -13,6 +13,10 @@ Template.modalEdit.helpers({
   fuck: function() {
   	var exerciseType = "test";
   	return exerciseType;
+  },
+  'exerciseID': function() {
+  	var exerciseID = Session.get('exerciseID');
+  	return exerciseID;
   }
 
 
