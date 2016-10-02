@@ -3,7 +3,6 @@ Template.listExerciseItem.onRendered(function() {
 	$(".collapsible").collapsible();
 
 	$('.modal-trigger').leanModal();
-
 });
 
 Template.listExerciseItem.events({

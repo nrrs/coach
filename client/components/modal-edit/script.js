@@ -6,18 +6,13 @@ Template.modalEdit.onRendered(function() {
 
 Template.modalEdit.helpers({
 
-  exerciseName: function() {
-  	var exerciseName = Session.get('exerciseName');
-  	return exerciseName;
-  },
-  fuck: function() {
-  	var exerciseType = "test";
-  	return exerciseType;
-  },
-  'exerciseID': function() {
+  exercise: function() {
   	var exerciseID = Session.get('exerciseID');
-  	return exerciseID;
-  }
+    
+  	var res = lifts.findOne({_id: exerciseID});
+    if (res) { return res; }
+    return wods.findOne({_id: exerciseID});
+  },
 
 
 });

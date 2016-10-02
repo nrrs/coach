@@ -30,6 +30,19 @@ Router.route('/test', {
 	name: 'test'
 });
 
+Router.route('/workout/:_id', {
+	name: 'single-page-workout',
+	data: function() {
+		return wods.findOne({ _id: this.params._id });
+	}
+});
+
+Router.route('/lift/:_id', {
+	name: 'single-page-lift',
+	data: function() {
+		return lifts.findOne({ _id: this.params._id });
+	}
+});
 // Router.go('/');
 
 // publications and subscriptions scope data to context (IE. User, guest, admin, role)

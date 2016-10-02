@@ -1,0 +1,15 @@
+<template name="SinglePageWorkout">
+	
+	<h1>{{_id}}</h1>
+	
+	{{#with this}}
+		<div class="list-exercise">
+			<ul class="app-list collapsible " data-collapsible="accordion">
+				{{> listExerciseItem}}
+			</ul>
+		</div>
+	{{/with}}
+
+	
+
+</template>

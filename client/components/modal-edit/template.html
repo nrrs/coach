@@ -2,7 +2,7 @@
 
 	<div id="edit" class="modal">
 		<div class="modal-content">
-		  <h4 class="default-gutter"> {{fuck}}: {{exerciseID}}</h4>
+		  <h4 class="default-gutter">{{exercise.collectionName}}</h4>
 
 		  <!--
 			
@@ -12,8 +12,11 @@
 			make "agree" save button.
 
 		  -->
-		 	
-		  {{> quickForm collection="lifts" doc=exerciseID id="editEntry" type="update"}}
+		 	<!-- collectionName: {{collectionName}}<br/>
+		 	collectionName from exercise: {{exercise.collectionName}} -->
+
+
+		  {{> quickForm collection=exercise.collectionName doc=exercise id="editEntry" type="update"}}
 
 		  <!--{{exerciseID}} -->
 

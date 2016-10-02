@@ -1,6 +1,10 @@
 wods = new Mongo.Collection("wods");
 
 wods.attachSchema(new SimpleSchema({
+	collectionName: {
+		type: String,
+		defaultValue: 'wods'
+	},
 	date: {
 		type: Date
 	},

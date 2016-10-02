@@ -1,6 +1,10 @@
 lifts = new Mongo.Collection("lifts");
 
 lifts.attachSchema(new SimpleSchema({
+	collectionName: {
+		type: String,
+		defaultValue: 'lifts'
+	},
 	date: {
 		type: Date
 	},
@@ -8,21 +12,11 @@ lifts.attachSchema(new SimpleSchema({
 		type: String,
 		allowedValues: [
 			'Back Squat',
-			'Front Squat',
-			'Overhead Squat',
-			'Strict Press',
-			'Push Press',
-			'Push Jerk',
-			'Split Jerk',
-			'Power Clean',
-			'Squat Clean',
-			'Power Snatch',
-			'Squat Snatch',
-			'Deadlift',
 			'Bench Press',
-			'Thruster',
-			'Cluster',
-			'Butt Thruster',
+			'Deadlift',
+			'Clean',
+			'Jerk',
+			'Snatch'
 		]
 	},
 	weight: {
