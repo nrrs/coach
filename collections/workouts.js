@@ -1,9 +1,9 @@
-wods = new Mongo.Collection("wods");
+workouts = new Mongo.Collection("workouts");
 
-wods.attachSchema(new SimpleSchema({
+workouts.attachSchema(new SimpleSchema({
 	collectionName: {
 		type: String,
-		defaultValue: 'wods'
+		defaultValue: 'workouts'
 	},
 	date: {
 		type: Date
@@ -20,10 +20,6 @@ wods.attachSchema(new SimpleSchema({
 		optional: true
 	},
 	conditioning: {
-		type: String,
-		optional: true
-	},
-	goat: {
 		type: String,
 		optional: true
 	},

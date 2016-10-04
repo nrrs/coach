@@ -6,10 +6,12 @@ lifts.attachSchema(new SimpleSchema({
 		defaultValue: 'lifts'
 	},
 	date: {
-		type: Date
+		type: Date,
+		label: "Completion Date"
 	},
 	liftType: {
 		type: String,
+		optional: true,
 		allowedValues: [
 			'Back Squat',
 			'Bench Press',
@@ -18,6 +20,15 @@ lifts.attachSchema(new SimpleSchema({
 			'Jerk',
 			'Snatch'
 		]
+	},
+	customLift: {
+		type: String,
+		optional: true,
+		autoform: {
+			afFieldInput: {
+				type: "text"
+			}
+		}
 	},
 	weight: {
 		type: Number,

@@ -5,18 +5,18 @@ Template.Index.onRendered(function() {
 });
 
 Template.Index.helpers({
+	
 
-	bothBMandLifts: function() {
-		var b = Template.instance().data.bm().fetch(),
-			l = Template.instance().data.lifts().fetch();
-			bl = b.concat(l);
-
+	exercises: function() {
+		var w = Template.instance().data.workouts().fetch(),
+			l = Template.instance().data.lifts().fetch(),
+			wl = w.concat(l);
 		return (_.sortBy(
-			bl,
-			function(bl) {
-				return bl.date;
+			wl,
+			function(wl) {
+				return wl.date;
 			}).reverse()
 		);
-	},
+	}
 
 });

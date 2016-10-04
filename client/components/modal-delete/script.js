@@ -6,7 +6,7 @@ Template.modalDelete.events({
 
   "click .confirm-delete": function () {
     var exerciseID = Session.get('exerciseID');
-    wods.remove(exerciseID);
+    workouts.remove(exerciseID);
     lifts.remove(exerciseID);
     benchmarks.remove(exerciseID);
   }

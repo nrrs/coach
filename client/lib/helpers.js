@@ -1,22 +1,17 @@
 Template.registerHelper("timestamp", function() {
-	return new Date();
+	return moment().format('YYYY-MM-DD');
 });
 
 Template.registerHelper("today", function() {
-	return moment(new Date()).format('LL');
+	return moment().format('LL');
 });
 
-Template.registerHelper("prettifyDateAgo", function(timestamp) {
-	return moment(new Date(timestamp)).fromNow();
+Template.registerHelper("prettifyDateAgo", function(date) {
+	return moment(new Date(date)).fromNow();
 });
 
-Template.registerHelper("prettifyDate", function(timestamp) {
-	var day = timestamp.getDate(),
-		month = timestamp.getMonth(),
-		year = timestamp.getFullYear(),
-		formattedDate = month+'/'+day+'/'+year;
-
-	return formattedDate;
+Template.registerHelper("prettifyDate", function(date) {
+	return moment.utc(date).format("L");
 });
 
 Template.registerHelper("linebreak", function(text) {

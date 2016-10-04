@@ -2,24 +2,16 @@ Router.route('/', {
 	name: 'index'
 });
 
-Router.route('/add-wod', {
+Router.route('/add-workouts', {
 	name: 'addWod'
-});
-
-Router.route('/add-benchmark', {
-	name: 'addBenchmark'
 });
 
 Router.route('/add-lift', {
 	name: 'addLift'
 });
 
-Router.route('/wods', {
-	name: 'wods'
-});
-
-Router.route('/benchmarks', {
-	name: 'benchmarks'
+Router.route('/workouts', {
+	name: 'workouts'
 });
 
 Router.route('/lifts', {

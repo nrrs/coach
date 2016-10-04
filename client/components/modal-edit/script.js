@@ -11,7 +11,7 @@ Template.modalEdit.helpers({
     
   	var res = lifts.findOne({_id: exerciseID});
     if (res) { return res; }
-    return wods.findOne({_id: exerciseID});
+    return workouts.findOne({_id: exerciseID});
   },
 
 

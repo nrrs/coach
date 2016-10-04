@@ -5,14 +5,13 @@
   {{#autoForm id="addLift" collection="lifts" type="insert"}}
     {{> afQuickField name="date" value=timestamp}}
     {{> afQuickField name="liftType" options="allowed" label="Lift"}}
+    {{> afQuickField name="customLift"}}
     {{> afQuickField name="weight"}}
     {{> afQuickField name="repScheme"}}
     {{> afQuickField name="notes" rows=6 class="materialize-textarea"}}
-    {{> afQuickField name="result" rows=6 class="materialize-textarea"}}
-    {{> afQuickField name="completionDate"}}
     <button id="save-lift" type="submit" class="btn">SAVE</button>
   {{/autoForm}}
 
-  <p class="message default-gutter"></p>
+  <p class="message default-gutter">kjjlk</p>
 
 </template>

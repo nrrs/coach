@@ -20,10 +20,19 @@ Template.listExerciseItem.events({
 
 Template.listExerciseItem.helpers({
 
-	test: function(category) {
-		if(category == "Fran") {
-			return true;
+	title: function() {
+		if (this.collectionName === "workouts") {
+			return this.name;
+		} else {
+			if (!this.customLift) {
+				return this.liftType;
+			}
+			return this.customLift;
 		}
+	},
+	completion: function() {
+		return this.date;
 	}
+
 
 });
