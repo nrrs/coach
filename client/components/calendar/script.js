@@ -12,38 +12,41 @@ Template.calendar.helpers({
             center: '',
             right: 'today prev next month basicWeek'
         },
-        defaultView: 'month',
+        defaultView: 'basicWeek',
         // Function providing events reactive computation for fullcalendar plugin
         events: function(start, end, timezone, callback) {
+            
             // set current year for filtering
-            // console.log(new Date(new Date().getFullYear(), 0, 1));
             var currentYearDate = moment( new Date(new Date().getFullYear(), 0, 1) ).format();
-            // console.log(currentYearDate);
+            
             // filter workouts older than this year
             var w = workouts.find().fetch().filter(function(workout) {
                 return moment.utc(workout.date).format() > currentYearDate;
             });
+
             // filter lifts older than this year
             var l = lifts.find().fetch().filter(function(lift) {
                 // return lift.date > currentYearDate;
                 return moment.utc(lift.date).format() > currentYearDate;
             });
+            
             // concat workouts and lifts into one array
             var exercises = w.concat(l);
+            
             // manipulate object display
             exercices = exercises.map(function(exercise) {
                 exercise.date = moment.utc(exercise.date).format();
+                
                 // if exercise = wod
                 if (exercise.collectionName == 'workouts') {
-                    exercise.color = 'green';
+                    exercise.color = '#90a4ae'; // blue-grey lighten 2
                     exercise.title = exercise.name;
                 }
 
                 // if exercise = lifts
                 if (exercise.collectionName == 'lifts') {
-                    exercise.color = 'red';
-                    // exercise.title = !exercise.liftType ? exercise.customLift : exercise.liftType;
-                    exercise.title = exercise._id;
+                    exercise.color = '#546e7a';
+                    exercise.title = !exercise.liftType ? exercise.customLift : exercise.liftType;
                 }
 
                 // exercise.title = exercise._id;
@@ -53,13 +56,13 @@ Template.calendar.helpers({
             callback(exercises);
         },
         eventClick: function(exercise) {
-            
             // send user to single page
-            console.log(exercise.collectionName);
-            
-            if (exercise.collectionName == 'wods') {
+            if (exercise.collectionName == 'workouts') {
+                Session.set('pageTitle', exercise.name);
                 Router.go('/workout/' + exercise._id);
             } else if (exercise.collectionName == 'lifts') {
+                var pgTitle = !exercise.liftType ? exercise.customLift : exercise.liftType;
+                Session.set('pageTitle', pgTitle);
                 Router.go('/lift/' + exercise._id);
             }
         },

@@ -3,3 +3,8 @@
 		text-transform: capitalize;
 	}
 }
+#editEntry {
+	.form-group:first-child {
+		display: none;
+	}
+}

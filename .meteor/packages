@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 iron:router
 materialize:materialize
@@ -15,6 +14,7 @@ dburles:collection-helpers
 aldeed:autoform
 aldeed:collection2
 momentjs:moment
-mike:mocha
 grigio:babel
 gquemart:meteor-reactive-fullcalendar
+underscore
+d3js:d3

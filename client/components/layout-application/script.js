@@ -1,5 +1,6 @@
-// Template.applicationLayout.onRendered(function() {
+Template.applicationLayout.onRendered(function() {
 
-// 	$(".collapsible").collapsible();
+	// $(".collapsible").collapsible();
+	$('.modal-trigger').leanModal();
 
-// })
+})

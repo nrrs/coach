@@ -13,46 +13,8 @@
 	        	Edit {{exercise.name}}
 	        {{/if}}
 		  </h4>
-
-		  <!--
-			
-			use modalEdit.helper to pull this item's unique ID.
-			change autoform type from insert to update
-			remove required fields
-			make "agree" save button.
-
-		  -->
-		 	<!-- collectionName: {{collectionName}}<br/>
-		 	collectionName from exercise: {{exercise.collectionName}} -->
-
-
 		  {{> quickForm collection=exercise.collectionName doc=exercise id="editEntry" type="update"}}
-
-		  <!--{{exerciseID}} -->
-
-		  <hr/>
-
-		  <!-- {{#autoForm id="editEntry" collection="lifts" type="insert"}}
-
-
-
-			{{> afQuickField name="date" value=timestamp}}
-			{{> afQuickField name="liftType" options="allowed" label="Lift"}}
-			{{> afQuickField name="weight"}}
-			{{> afQuickField name="repScheme"}}
-			{{> afQuickField name="notes" rows=6 class="materialize-textarea"}}
-			{{> afQuickField name="result" rows=6 class="materialize-textarea"}}
-			{{> afQuickField name="completionDate"}}
-		    <button id="save-lift" type="submit" class="modal-action modal-close waves-effect waves-green btn">DONE</button>
-		  {{/autoForm}} -->
-
-
 		</div>
-		<!--
-		<div class="modal-footer">
-		  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
-		</div>
-		-->
 	</div>
 
 </template>

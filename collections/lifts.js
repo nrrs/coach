@@ -20,6 +20,16 @@ lifts.attachSchema(new SimpleSchema({
 			'Jerk',
 			'Snatch'
 		]
+		// autoform: {
+		// 	options: {
+		// 		"Back Squat": 'back-squat',
+		// 		"Bench Press": 'bench-press',
+		// 		"Deadlift": 'deadlift',
+		// 		"Clean": 'clean',
+		// 		"Jerk": 'jerk',
+		// 		"Snatch": 'snatch'
+		// 	}
+		// }
 	},
 	customLift: {
 		type: String,

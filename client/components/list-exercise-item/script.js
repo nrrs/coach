@@ -2,7 +2,7 @@ Template.listExerciseItem.onRendered(function() {
 
 	$(".collapsible").collapsible();
 
-	$('.modal-trigger').leanModal();
+	// $('.modal-trigger').leanModal();
 });
 
 Template.listExerciseItem.events({

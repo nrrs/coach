@@ -1,0 +1,9 @@
+#calendar-container {
+	margin-top:  $base-unit;
+	.fc-today {
+		background: #eceff1;
+	}
+	.fc-day-grid-event:hover {
+		cursor: pointer;
+	}
+}

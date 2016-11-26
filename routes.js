@@ -1,3 +1,7 @@
+Router.configure({
+  layoutTemplate: 'ApplicationLayout',
+});
+
 Router.route('/', {
 	name: 'index'
 });
@@ -18,19 +22,19 @@ Router.route('/lifts', {
 	name: 'lifts'
 });
 
-Router.route('/test', {
-	name: 'test'
+Router.route('/insight', {
+	name: 'page-insight'
 });
 
 Router.route('/workout/:_id', {
-	name: 'single-page-workout',
+	name: 'page-single-workout',
 	data: function() {
-		return wods.findOne({ _id: this.params._id });
+		return workouts.findOne({ _id: this.params._id });
 	}
 });
 
 Router.route('/lift/:_id', {
-	name: 'single-page-lift',
+	name: 'page-single-lift',
 	data: function() {
 		return lifts.findOne({ _id: this.params._id });
 	}

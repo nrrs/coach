@@ -1,0 +1,36 @@
+<template name="PageSingleWorkout">
+	
+	{{#with this}}
+		<h1>{{this.name}}</h1>
+		<div class="default-gutter">
+			{{#if warmup}}
+				<strong>Warm Up:</strong>
+				<p>{{{linebreak warmup}}}</p>
+				<br/>
+			{{/if}}
+
+			{{#if strength}}
+				<strong>Strength:</strong>
+				<p>{{{linebreak strength}}}</p>
+				<br/>
+			{{/if}}
+
+			{{#if conditioning}}
+				<strong>Conditioning:</strong>
+				<p>{{{linebreak conditioning}}}</p>
+				<br/>
+			{{/if}}
+
+			{{#if goat}}
+				<strong>Goat:</strong>
+				<p>{{{linebreak goat}}}</p>
+				<br/>
+			{{/if}}
+		</div>
+
+		<a class="waves-effect waves-red btn-flat modal-trigger delete" href="#delete">Delete</a>
+		<a class="waves-effect waves-green btn-flat modal-trigger edit left" href="#edit">Edit</a>
+		
+	{{/with}}
+
+</template>

@@ -1,7 +1,5 @@
 <template name="addLift">
 
-  {{> NavBar}}
-
   {{#autoForm id="addLift" collection="lifts" type="insert"}}
     {{> afQuickField name="date" value=timestamp}}
     {{> afQuickField name="liftType" options="allowed" label="Lift"}}
